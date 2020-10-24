@@ -19,7 +19,7 @@ function Landing() {
          setMapPoints(response.data);
          console.log(response.data)
       });
-   }, []);
+   }, [mapPoints]);
 
 
 
@@ -48,9 +48,6 @@ function Landing() {
             </div>
             <div className="mapContainer">
                <GarbageMap mapPoints={mapPoints} />
-               <Link to="/orphanages/create" className="createReport">
-                  <FiPlus size={32} color="#fff" />
-               </Link>
             </div>
             <div>
                <p>Footer</p>

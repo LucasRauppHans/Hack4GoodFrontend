@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiPlus, FiTrash2 } from "react-icons/fi";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import Modal from "react-modal";
 import "leaflet/dist/leaflet.css";
-import mapIcon from "../../utils/mapIcon";
+import mapIconGreen from "../../utils/mapIconsGreen";
+import mapIconRed from "../../utils/mapIconsRed";
+import mapIconYellow from "../../utils/mapIconsYellow";
 import { MapPoints } from "../../interfaces/MapPoints";
 import "./Map.css";
+import { CreateReportModal } from "../CreateReportModal";
+import api from "../../services/api";
 
 interface GarbageMapProps {
    mapPoints: MapPoints[];
@@ -14,6 +19,28 @@ interface GarbageMapProps {
 export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
    const [currentLatitude, setCurrentLatitude] = useState<number>(-30.1084987);
    const [currentLongitude, setCurrentLongitude] = useState<number>(-51.317225);
+   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+
+   async function handleAssignToMe(mapPoint: MapPoints) {
+      console.log(mapPoint);
+      // const data = new FormData();
+      // data.append("reporterName", "");
+      // data.append("reporterContact", );
+      // data.append("latitude", String(latitude));
+      // data.append("longitude", String(longitude));
+      // data.append("description", description);
+      // data.append("severity", severity);
+      // data.append("assignee", " ");
+      // data.append("assigneeContact", " ");
+      // data.append("progress", "created");
+      // images.forEach((image) => {
+      //    data.append("images", image);
+      // });
+
+      // console.log(data);
+
+      // await api.put(`trashpoint/:${mapPoint.id}`, data);
+   }
 
    useEffect(() => {
       navigator.geolocation.getCurrentPosition(
@@ -29,38 +56,66 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
       );
    }, []);
 
-   return (
-      <Map
-         className="map"
-         center={[currentLatitude, currentLongitude]}
-         zoom={13}
-         style={{ width: "100%", height: "100%" }}
-      >
-         <TileLayer
-            url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
-         />
+   const getMapIcon = (mapPoint: MapPoints) => {
+      if (mapPoint.progress === "in-progress") return mapIconYellow;
+      if (mapPoint.progress === "created") return mapIconRed;
+      if (mapPoint.progress === "completed") return mapIconGreen;
+   };
 
-         {mapPoints.map((mapPoint) => {
-            return (
-               <Marker
-                  key={mapPoint.id}
-                  icon={mapIcon}
-                  position={[mapPoint.latitude, mapPoint.longitude]}
-               >
-                  <Popup
-                     className="map-popup"
-                     closeButton={false}
-                     minWidth={240}
-                     maxWidth={240}
+   return (
+      <>
+         <Map
+            className="map"
+            center={[currentLatitude, currentLongitude]}
+            zoom={13}
+            style={{ width: "100%", height: "100%" }}
+         >
+            <TileLayer
+               url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+            />
+
+            {mapPoints.map((mapPoint) => {
+               return (
+                  <Marker
+                     key={mapPoint.id}
+                     icon={getMapIcon(mapPoint)}
+                     position={[mapPoint.latitude, mapPoint.longitude]}
                   >
-                     {mapPoint.name}
-                     <Link to={`/orphanages/${mapPoint.id}`}>
-                        <FiArrowRight size={20} color="blue" />
-                     </Link>
-                  </Popup>
-               </Marker>
-            );
-         })}
-      </Map>
+                     <Popup
+                        className="map-popup"
+                        closeButton={false}
+                        minWidth={240}
+                        maxWidth={240}
+                     >
+                        <button
+                           type="button"
+                           onClick={() => handleAssignToMe(mapPoint)}
+                        >
+                           Assign to me
+                        </button>
+                     </Popup>
+                  </Marker>
+               );
+            })}
+         </Map>
+
+         <button
+            type="button"
+            className="createReport"
+            onClick={(): void => setModalIsOpen(true)}
+         >
+            <FiPlus size={32} color="#fff" />
+         </button>
+
+         <Modal
+            className="modal"
+            isOpen={modalIsOpen}
+            shouldCloseOnEsc={false}
+            shouldCloseOnOverlayClick={false}
+            style={{ overlay: { zIndex: 100, background: "rgba(0,0,0,0.7)" } }}
+         >
+            <CreateReportModal onClose={(): void => setModalIsOpen(false)} />
+         </Modal>
+      </>
    );
 };

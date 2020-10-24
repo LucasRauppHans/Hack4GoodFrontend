@@ -1,6 +1,11 @@
 export interface MapPoints {
    id: number;
-   name: string;
+   reporterName: string;
    latitude: number;
    longitude: number;
+   description: string;
+   severity: string;
+   assignee: string;
+   assigneeContact: string;
+   progress: string;
 }

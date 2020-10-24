@@ -1,0 +1,188 @@
+main {
+   flex: 1;
+}
+
+.reportForm {
+   width: 700px;
+   height: 820px;
+   margin: 64px auto;
+
+   background: #ffffff;
+   border: 1px solid #d3e2e5;
+   border-radius: 20px;
+
+   padding: 20px 20px;
+
+   overflow: hidden;
+}
+
+form.reportForm .leaflet-container {
+   margin-bottom: 40px;
+   border: 1px solid #d3d2d5;
+   border-radius: 20px;
+}
+
+form.reportForm fieldset {
+   border: 0;
+}
+
+form.reportForm fieldset + fieldset {
+   margin-top: 50px;
+}
+
+form.reportForm .inputContainer + .inputContainer {
+   margin-top: 20px;
+}
+
+form.reportForm .inputContainer label {
+   display: flex;
+   color: #8fa7b3;
+   margin-bottom: 8px;
+   line-height: 10px;
+}
+
+form.reportForm .inputContainer label span {
+   font-size: 10px;
+   color: #8fa7b3;
+   margin-left: 24px;
+   line-height: 24px;
+}
+
+form.reportForm .inputContainer input,
+form.reportForm .inputContainer textarea {
+   width: 100%;
+   height: 80px;
+   background: #f5f8fa;
+   border: 1px solid #d3e2e5;
+   border-radius: 20px;
+   outline: none;
+   color: #5c8599;
+}
+
+form.reportForm .inputContainer input {
+   height: 40px;
+   padding: 0 16px;
+}
+
+form.reportForm .inputContainer textarea {
+   min-height: 120px;
+   max-height: 250px;
+   resize: vertical;
+   padding: 16px;
+   line-height: 20px;
+}
+
+form.reportForm .inputContainer .imagesContainer {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-gap: 16px;
+}
+
+form.reportForm .inputContainer .imagesContainer img {
+   width: 100%;
+   height: 96px;
+   object-fit: cover;
+   border-radius: 20px;
+}
+
+form.reportForm .inputContainer .imagesContainer .new-image {
+   height: 96px;
+   background: #f5f8fa;
+   border: 1px dashed #96d2f0;
+   border-radius: 20px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+form.reportForm .inputContainer input[type="file"] {
+   display: none;
+}
+
+form.reportForm .inputContainer .button-select {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+form.reportForm .inputContainer .button-select button {
+   height: 64px;
+   background: #f5f8fa;
+   border: 1px solid #d3e2e5;
+   color: #5c8599;
+   cursor: pointer;
+}
+
+form.reportForm .inputContainer .button-select button.active {
+   background: #edfff6;
+   border: 1px solid #a1e9c5;
+   color: #37c77f;
+}
+
+form.reportForm .inputContainer .button-select button:first-child {
+   border-radius: 20px 0px 0px 20px;
+}
+
+form.reportForm .inputContainer .button-select button:last-child {
+   border-radius: 0 20px 20px 0;
+   border-left: 0;
+}
+
+form.reportForm button.confirm-button {
+   margin-top: 64px;
+
+   width: 100%;
+   height: 64px;
+   border: 0;
+   cursor: pointer;
+   background: #3cdc8c;
+   border-radius: 20px;
+   color: #ffffff;
+   font-weight: 800;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   transition: background-color 0.2s;
+}
+
+.severityDropdown {
+   border-radius: 5px;
+   width: 50%;
+   height: 40px;
+   padding: 0 16px;
+}
+
+.buttons {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin-top: 10px;
+}
+
+.closeButton {
+   background: white;
+   height: 40px;
+   width: 48%;
+   background: #f5f8fa;
+   border: 1px solid #d3e2e5;
+   border-radius: 20px;
+   outline: none;
+   color: #5c8599;
+}
+
+.confirmButton {
+   background: #36cf82;
+   height: 40px;
+   width: 48%;
+   background: #f5f8fa;
+   border: 1px solid #d3e2e5;
+   border-radius: 20px;
+   outline: none;
+   color: #5c8599;
+}
+
+.button svg {
+   margin-right: 16px;
+}
