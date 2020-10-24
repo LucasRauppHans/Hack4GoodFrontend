@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
@@ -12,10 +12,27 @@ interface GarbageMapProps {
 }
 
 export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
+   const [currentLatitude, setCurrentLatitude] = useState<number>(-30.1084987);
+   const [currentLongitude, setCurrentLongitude] = useState<number>(-51.317225);
+
+   useEffect(() => {
+      navigator.geolocation.getCurrentPosition(
+         (position) => {
+            setCurrentLatitude(position.coords.latitude);
+            setCurrentLongitude(position.coords.longitude);
+            console.log("Latitude: ", position.coords.latitude);
+            console.log("Longitude: ", position.coords.longitude);
+         },
+         (error) => {
+            console.error("Error Code = " + error.code + " - " + error.message);
+         }
+      );
+   }, []);
+
    return (
       <Map
          className="map"
-         center={[-29.7509965, -51.1781533]}
+         center={[currentLatitude, currentLongitude]}
          zoom={13}
          style={{ width: "100%", height: "100%" }}
       >

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./LandingPage.css";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiPlus } from "react-icons/fi";
 import logoImg from "../../images/logo.svg";
 import { Link } from "react-router-dom";
 import { GarbageMap } from "../../components/Map";
@@ -33,18 +33,21 @@ function Landing() {
 
                   <Link to="/app" className="button">
                      {/* <FiArrowRight size={26} color="rgba(0,0,0,0.6)" /> */}
-                     <text>Join us</text>
+                     <p>Join us</p>
                   </Link>
                </div>
             </div>
             <div className="statisticContainer">
-               <text>Insert statistics</text>
+               <p>Insert statistics</p>
             </div>
             <div className="mapContainer">
                <GarbageMap mapPoints={mapPoints} />
+               <Link to="/orphanages/create" className="createReport">
+                  <FiPlus size={32} color="#fff" />
+               </Link>
             </div>
             <div>
-               <text>Footer</text>
+               <p>Footer</p>
             </div>
          </div>
       </>
