@@ -21,11 +21,9 @@ function Landing() {
          <div className="grid-container">
             <div className="infos">
                <div className="logo">
-                  <div>
-                     <img src={logoImg} alt="Happy" />
-                  </div>
+                  <div>{/* <img src={logoImg} alt="Happy" /> */}</div>
                </div>
-               <div className="massage">
+               <div className="message">
                   <main>
                      <h1>Help us to make the world cleaner!</h1>
                      <p>Find someone who needs you.</p>
