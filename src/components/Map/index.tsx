@@ -21,25 +21,13 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
    const [currentLongitude, setCurrentLongitude] = useState<number>(-51.317225);
    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
-   async function handleAssignToMe(mapPoint: MapPoints) {
-      console.log(mapPoint);
-      // const data = new FormData();
-      // data.append("reporterName", "");
-      // data.append("reporterContact", );
-      // data.append("latitude", String(latitude));
-      // data.append("longitude", String(longitude));
-      // data.append("description", description);
-      // data.append("severity", severity);
-      // data.append("assignee", " ");
-      // data.append("assigneeContact", " ");
-      // data.append("progress", "created");
-      // images.forEach((image) => {
-      //    data.append("images", image);
-      // });
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+   async function handleSetToInProgress(mapPoint: MapPoints) {
+      await api.put(`trashpoint/:${mapPoint.id}`, "in-progress");
+   }
 
-      // console.log(data);
-
-      // await api.put(`trashpoint/:${mapPoint.id}`, data);
+   async function handleSetToDone(mapPoint: MapPoints) {
+      await api.put(`trashpoint/:${mapPoint.id}`, "in-progress");
    }
 
    useEffect(() => {
@@ -89,9 +77,15 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
                      >
                         <button
                            type="button"
-                           onClick={() => handleAssignToMe(mapPoint)}
+                           onClick={() => handleSetToInProgress(mapPoint)}
                         >
-                           Assign to me
+                           Set to inProgress
+                        </button>
+                        <button
+                           type="button"
+                           onClick={() => handleSetToDone(mapPoint)}
+                        >
+                           Set to done
                         </button>
                      </Popup>
                   </Marker>
