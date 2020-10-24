@@ -1,0 +1,24 @@
+.h1 {
+    font-size: 60px;
+}
+
+.statistics{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.progress{
+    width: 75%;
+    margin-top: 10px;
+    align-items: center;
+    
+}
+
+.bar {
+    border-radius: 5;
+}
+
