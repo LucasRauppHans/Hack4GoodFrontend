@@ -7,7 +7,7 @@
    grid-template-rows: 700px 300px;
    row-gap: 10px;
    column-gap: 30px;
-   background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+   background: linear-gradient(329.54deg, #1FAD83 0%, #C7FCC5 100%);
 }
 
 .infos {
@@ -28,6 +28,7 @@
 .statisticContainer {
    grid-row: 1;
    grid-column: 2;
+   background: url("../../images/tree-in-pot.svg") no-repeat 10% center; 
 }
 
 .mapContainer {
@@ -71,7 +72,7 @@
    margin-bottom: 100px;
    width: 400px;
    height: 60px;
-   background: #ffd666;
+   background: #33261d;
    border-radius: 30px;
 
    display: flex;
@@ -82,7 +83,7 @@
 }
 
 .message .button:hover {
-   background: #96feff;
+   background: #33261d;
 }
 
 .mapContainer {
@@ -104,7 +105,7 @@
    width: 64px;
    height: 64px;
    /* background: #15c3d6; */
-   background: red;
+   background: #33261d;
    border-radius: 20px;
 
    display: flex;
@@ -115,5 +116,6 @@
 }
 
 .createReport:hover {
-   background: #17d6eb;
+   background: #d1e1cb;
 }
+
