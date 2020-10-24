@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 import "../styles/pages/orphanage.css";
 
-import mapIcon from "../utils/mapIcon";
+import mapIcon from "../utils/mapIconsGreen";
 
 interface Orphanage {
    name: string;

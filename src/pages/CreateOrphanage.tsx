@@ -7,7 +7,7 @@ import { FiPlus } from "react-icons/fi";
 import "../styles/pages/create-orphanage.css";
 import Sidebar from "../components/Sidebar";
 
-import mapIcon from "../utils/mapIcon";
+import mapIcon from "../utils/mapIconsGreen";
 import api from "../services/api";
 import { useHistory } from "react-router-dom";
 

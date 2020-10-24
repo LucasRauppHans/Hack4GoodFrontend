@@ -11,10 +11,10 @@ function Landing() {
    const [mapPoints, setMapPoints] = useState<MapPoints[]>([]);
 
    useEffect(() => {
-      api.get("orphanages").then((response) => {
+      api.get("trashpoint").then((response) => {
          setMapPoints(response.data);
       });
-   }, []);
+   }, [mapPoints]);
 
    return (
       <>
@@ -40,9 +40,6 @@ function Landing() {
             </div>
             <div className="mapContainer">
                <GarbageMap mapPoints={mapPoints} />
-               <Link to="/orphanages/create" className="createReport">
-                  <FiPlus size={32} color="#fff" />
-               </Link>
             </div>
             <div>
                <p>Footer</p>
