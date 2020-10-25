@@ -46,7 +46,7 @@ export const CreateReportModal: React.FC<CreateReportModalProps> = ({
       console.log(data);
 
       await api.post("trashpoint", data);
-      alert("Cadastro realizado com sucesso");
+      alert("Point created successfully!");
       onClose();
    }
 
@@ -146,7 +146,7 @@ export const CreateReportModal: React.FC<CreateReportModalProps> = ({
                   </div>
 
                   <div className="inputContainer">
-                     <label htmlFor="images">Fotos</label>
+                     <label htmlFor="images">Photos</label>
 
                      <div className="imagesContainer">
                         {previewImages.map((image) => {
@@ -170,7 +170,7 @@ export const CreateReportModal: React.FC<CreateReportModalProps> = ({
                      type="button"
                      onClick={handleSubmit}
                   >
-                     Confirmar
+                     Confirm
                   </button>
                   <button
                      className="closeButton"

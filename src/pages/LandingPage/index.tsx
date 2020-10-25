@@ -53,7 +53,7 @@ function Landing() {
                      <button type="button" className="button">
                         <a
                            className="link"
-                           href="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
+                           href="https://vakinha.com.br"
                         >
                            <h2>Donate</h2>
                         </a>
@@ -69,7 +69,7 @@ function Landing() {
                   <h1 className="MapDescription">How to Report</h1>
                   <div className="mapText">
                      <div>
-                        On the map, select the exact spot where you found
+                        On the map, click on the + button and select the exact spot where you found
                         litter.
                      </div>
                      <div>
