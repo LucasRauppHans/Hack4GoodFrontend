@@ -80,29 +80,6 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
                         minWidth={240}
                         maxWidth={240}
                      >
-<<<<<<< HEAD
-                        <button
-                           type="button"
-                           onClick={() => handleSetToInProgress(mapPoint)}
-                        >
-                           Set to inProgress
-                        </button>
-                        <button
-                           type="button"
-                           onClick={() => handleSetToDone(mapPoint)}
-                        >
-                           Set to done
-                        </button>
-                        <button
-                           type="button"
-                           onClick={() => {
-                              setIdModal(mapPoint.id);
-                              setMoreInfoOpen(true);
-                           }}
-                        >
-                           More info
-                        </button>
-=======
                         <div className="buttonsDiv">
                            <button
                               type="button"
@@ -129,7 +106,6 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
                               More info
                            </button>
                         </div>
->>>>>>> 65ef79c6f586f99094e73a8192237e182898274d
                      </Popup>
                   </Marker>
                );
