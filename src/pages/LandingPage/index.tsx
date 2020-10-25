@@ -30,10 +30,6 @@ function Landing() {
                </div>
                <div className="message">
                   <main>
-<<<<<<< HEAD
-                     <h1 className="green_text">When we are all together, WeClean</h1>
-                     <p >We connect volunteers that are willing to help clean up the cities, send reports about areas with litter, or both! </p>
-=======
                      <h1 className="green_text">
                         When we are all together, WeClean
                      </h1>
@@ -42,12 +38,11 @@ function Landing() {
                         the cities, send reports about areas with litter, or
                         both!{" "}
                      </p>
->>>>>>> 65ef79c6f586f99094e73a8192237e182898274d
                      <p>You can also donate to our community</p>
                   </main>
                   <div className="buttons">
                      <button type="button" className="button">
-                        <h2>More information</h2>
+                        <h2>About volunteering and more</h2>
                      </button>
                      <button type="button" className="button">
                         <a
@@ -55,10 +50,14 @@ function Landing() {
                            href="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
                         >
 <<<<<<< HEAD
+<<<<<<< HEAD
                            <h2>Donate</h2> 
 =======
                            <h2>Donate</h2>
 >>>>>>> 65ef79c6f586f99094e73a8192237e182898274d
+=======
+                        <h2>Donate</h2>
+>>>>>>> 4766780bb7f026822d8193ac92d707ad45de2243
                         </a>
                      </button>
                   </div>
@@ -70,14 +69,13 @@ function Landing() {
             <div className="mapContainer">
                <div className="lateralMap">
                   <h1 className="MapDescription">
-                     Find your spot and start to help Find your spot and start
-                     to help Find your spot and start to helpFind your spot and
-                     start to helpFind your spot and start to helpFind your spot
-                     and start to helpFind your spot and start to helpFind your
-                     spot and start to helpFind your spot and start to helpFind
-                     your spot and start to helpFind your spot and start to
-                     helpFind your spot and start to help{" "}
+                     How to Report
                   </h1>
+                  <div className="mapText">
+                     <div>On the map, select the exact spot where you found litter.</div>
+                     <div>After that, just fill the form and send it to our community. {" "}</div>
+                  </div>
+                  
                </div>
                <GarbageMap mapPoints={mapPoints} />
             </div>
