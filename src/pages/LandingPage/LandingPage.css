@@ -61,14 +61,13 @@
    line-height: 34px;
 }
 
-.infos .message .buttons{
+.infos .message .buttons {
    display: flex;
    align-items: center;
    justify-content: center;
    flex-direction: column;
    padding-top: 30px;
 }
-
 
 .link {
    color: #5c8599;
@@ -85,7 +84,6 @@
    border-radius: 30px;
    text-decoration: none;
    transition: background-color 0.2s;
-   
 }
 
 .buttons {
@@ -113,22 +111,20 @@
 }
 
 .mapContainer .MapDescription {
-    font-size: 60px;
-    color:rgb(10, 78, 10);
+   font-size: 60px;
+   color: rgb(10, 78, 10);
 }
-.mapContainer .mapText{
-    font-size: 35px;
+.mapContainer .mapText {
+   font-size: 35px;
    display: flex;
    align-items: center;
    justify-content: center;
    flex-direction: column;
    margin-right: 10px;
 }
-.mapContainer .mapText div{
-   margin-top:30px;
+.mapContainer .mapText div {
+   margin-top: 30px;
 }
-
-
 
 .createReport {
    position: absolute;
@@ -140,7 +136,7 @@
    width: 64px;
    height: 64px;
    /* background: #15c3d6; */
-   background: #33261d;
+   background: #5fc084;
    border-radius: 20px;
 
    display: flex;
@@ -151,7 +147,7 @@
 }
 
 .createReport:hover {
-   background: #d1e1cb;
+   background: #336123;
 }
 
 .footer {
@@ -167,8 +163,8 @@
 }
 
 .trashImage {
-   height: 150px;
-   width: 150px;
+   height: 10em;
+   width: 10em;
    border-radius: 40px;
 }
 
@@ -194,3 +190,16 @@ p {
    text-align: justify;
 }
 
+.footerTitle {
+   margin-bottom: 15px;
+}
+
+.compare {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.arrow {
+   width: 8em;
+}

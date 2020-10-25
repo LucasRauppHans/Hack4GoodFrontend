@@ -10,6 +10,8 @@ import lixo3 from "../../images/lixo3.jpg";
 import lixo4 from "../../images/lixo4.jpg";
 import lixo5 from "../../images/lixo5.jpg";
 import lixo6 from "../../images/lixo6.jpg";
+import { FiArrowRight } from "react-icons/fi";
+import setaDireita from "../../images/setaDireita.svg";
 
 function Landing() {
    const [mapPoints, setMapPoints] = useState<MapPoints[]>([]);
@@ -49,7 +51,7 @@ function Landing() {
                            className="link"
                            href="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
                         >
-                        <h2>Donate</h2>
+                           <h2>Donate</h2>
                         </a>
                      </button>
                   </div>
@@ -60,43 +62,57 @@ function Landing() {
             </div>
             <div className="mapContainer">
                <div className="lateralMap">
-                  <h1 className="MapDescription">
-                     How to Report
-                  </h1>
+                  <h1 className="MapDescription">How to Report</h1>
                   <div className="mapText">
-                     <div>On the map, select the exact spot where you found litter.</div>
-                     <div>After that, just fill the form and send it to our community. {" "}</div>
+                     <div>
+                        On the map, select the exact spot where you found
+                        litter.
+                     </div>
+                     <div>
+                        After that, just fill the form and send it to our
+                        community.{" "}
+                     </div>
                   </div>
-                  
                </div>
                <GarbageMap mapPoints={mapPoints} />
             </div>
             <div className="footer">
-               <div className="footerline">
-                  <img src={lixo1} className="trashImage" alt="lixo" />
-                  <img src={lixo2} className="trashImage" alt="lixo" />
-                  <img src={lixo3} className="trashImage" alt="lixo" />
-                  <img src={lixo4} className="trashImage" alt="lixo" />
-                  <img src={lixo5} className="trashImage" alt="lixo" />
-                  <img src={lixo6} className="trashImage" alt="lixo" />
-                  <img src={lixo4} className="trashImage" alt="lixo" />
-                  <img src={lixo5} className="trashImage" alt="lixo" />
-                  <img src={lixo6} className="trashImage" alt="lixo" />
-                  <img src={lixo5} className="trashImage" alt="lixo" />
-                  <img src={lixo6} className="trashImage" alt="lixo" />
+               <div className="footerTitle">
+                  <h1>Spots We Cleaned</h1>
                </div>
                <div className="footerline">
-                  <img src={lixo1} className="trashImage" alt="lixo" />
-                  <img src={lixo2} className="trashImage" alt="lixo" />
-                  <img src={lixo3} className="trashImage" alt="lixo" />
-                  <img src={lixo4} className="trashImage" alt="lixo" />
-                  <img src={lixo5} className="trashImage" alt="lixo" />
-                  <img src={lixo6} className="trashImage" alt="lixo" />
-                  <img src={lixo4} className="trashImage" alt="lixo" />
-                  <img src={lixo5} className="trashImage" alt="lixo" />
-                  <img src={lixo6} className="trashImage" alt="lixo" />
-                  <img src={lixo5} className="trashImage" alt="lixo" />
-                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <div className="compare">
+                     <img src={lixo1} className="trashImage" alt="lixo" />
+                     <img src={setaDireita} alt="seta" className="arrow" />
+                     <img src={lixo2} className="trashImage" alt="lixo" />
+                  </div>
+                  <div className="compare">
+                     <img src={lixo1} className="trashImage" alt="lixo" />
+                     <img src={setaDireita} alt="seta" className="arrow" />
+                     <img src={lixo2} className="trashImage" alt="lixo" />
+                  </div>
+                  <div className="compare">
+                     <img src={lixo1} className="trashImage" alt="lixo" />
+                     <img src={setaDireita} alt="seta" className="arrow" />
+                     <img src={lixo2} className="trashImage" alt="lixo" />
+                  </div>
+               </div>
+               <div className="footerline">
+                  <div className="compare">
+                     <img src={lixo1} className="trashImage" alt="lixo" />
+                     <img src={setaDireita} alt="seta" className="arrow" />
+                     <img src={lixo2} className="trashImage" alt="lixo" />
+                  </div>
+                  <div className="compare">
+                     <img src={lixo1} className="trashImage" alt="lixo" />
+                     <img src={setaDireita} alt="seta" className="arrow" />
+                     <img src={lixo2} className="trashImage" alt="lixo" />
+                  </div>
+                  <div className="compare">
+                     <img src={lixo1} className="trashImage" alt="lixo" />
+                     <img src={setaDireita} alt="seta" className="arrow" />
+                     <img src={lixo2} className="trashImage" alt="lixo" />
+                  </div>
                </div>
             </div>
          </div>
