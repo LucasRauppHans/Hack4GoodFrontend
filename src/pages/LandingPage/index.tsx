@@ -7,10 +7,9 @@ import { MapPoints } from "../../interfaces/MapPoints";
 import lixo1 from "../../images/lixo1.jpg";
 import lixo2 from "../../images/lixo2.jpg";
 import lixo3 from "../../images/lixo3.jpg";
-import lixo4 from "../../images/lixo4.jpg";
-import lixo5 from "../../images/lixo5.jpg";
-import lixo6 from "../../images/lixo6.jpg";
-import { FiArrowRight } from "react-icons/fi";
+import limpo1 from "../../images/863cd90e-6f1c-470f-b299-5befb418523c.jpg";
+import limpo2 from "../../images/denisse-leon-KaZ88TwgYhA-unsplash.jpg";
+import limpo3 from "../../images/isaac-sloman-9CuyHFUinFI-unsplash.jpg";
 import setaDireita from "../../images/iconmonstr-arrow-17.svg";
 
 function Landing() {
@@ -89,25 +88,27 @@ function Landing() {
                   <div className="compare">
                      <img src={lixo1} className="trashImage" alt="lixo" />
                      <img src={setaDireita} alt="seta" className="arrow" />
-                     <img src={lixo2} className="trashImage" alt="lixo" />
+                     <img src={limpo1} className="trashImage" alt="lixo" />
                   </div>
                   <div className="compare">
-                     <img src={lixo1} className="trashImage" alt="lixo" />
-                     <img src={setaDireita} alt="seta" className="arrow" />
                      <img src={lixo2} className="trashImage" alt="lixo" />
+                     <img src={setaDireita} alt="seta" className="arrow" />
+                     <img src={limpo2} className="trashImage" alt="lixo" />
                   </div>
                   <div className="compare">
-                     <img src={lixo1} className="trashImage" alt="lixo" />
+                     <img src={lixo3} className="trashImage" alt="lixo" />
                      <img src={setaDireita} alt="seta" className="arrow" />
-                     <img src={lixo2} className="trashImage" alt="lixo" />
+                     <img src={limpo3} className="trashImage" alt="lixo" />
                   </div>
                </div>
-               <div className="footerText">
-                  <h2>
-                     Our main goal is to make the world a better place to live!
-                     With your help, we can keep our cities clean and
-                     environmentally friendlier.
-                  </h2>
+               <div className="footerMessage">
+                  <div className="footerText">
+                     <h2>
+                        Our main goal is to make the world a better place to
+                        live! With your help, we can keep our cities clean and
+                        environmentally friendlier.
+                     </h2>
+                  </div>
                </div>
             </div>
          </div>

@@ -143,6 +143,7 @@
    justify-content: center;
    align-items: center;
    border: none;
+   outline: none;
    transition: background-color 0.2s;
 }
 
@@ -163,8 +164,8 @@
 }
 
 .trashImage {
-   height: 10em;
-   width: 10em;
+   height: 11em;
+   width: 11em;
    border-radius: 40px;
 }
 
@@ -203,13 +204,18 @@ p {
 }
 
 .arrow {
-   width: 8em;
+   width: 6em;
    margin: 0px 0.5em;
 }
 
 .footerText {
    font-size: 20px;
    width: 60em;
+   text-align: center;
+}
+
+.footerMessage {
+   margin-top: 4em;
    display: flex;
    align-items: center;
    justify-content: space-around;
