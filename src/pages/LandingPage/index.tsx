@@ -42,14 +42,14 @@ function Landing() {
                   </main>
                   <div className="buttons">
                      <button type="button" className="button">
-                        <h2>More information</h2>
+                        <h2>About volunteering and more</h2>
                      </button>
                      <button type="button" className="button">
                         <a
                            className="link"
                            href="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
                         >
-                           <h2>Donate</h2>
+                        <h2>Donate</h2>
                         </a>
                      </button>
                   </div>
@@ -61,14 +61,13 @@ function Landing() {
             <div className="mapContainer">
                <div className="lateralMap">
                   <h1 className="MapDescription">
-                     Find your spot and start to help Find your spot and start
-                     to help Find your spot and start to helpFind your spot and
-                     start to helpFind your spot and start to helpFind your spot
-                     and start to helpFind your spot and start to helpFind your
-                     spot and start to helpFind your spot and start to helpFind
-                     your spot and start to helpFind your spot and start to
-                     helpFind your spot and start to help{" "}
+                     How to Report
                   </h1>
+                  <div className="mapText">
+                     <div>On the map, select the exact spot where you found litter.</div>
+                     <div>After that, just fill the form and send it to our community. {" "}</div>
+                  </div>
+                  
                </div>
                <GarbageMap mapPoints={mapPoints} />
             </div>
