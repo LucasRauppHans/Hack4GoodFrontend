@@ -67,30 +67,42 @@
    line-height: 34px;
 }
 
-.message .button {
-   margin-top: 100px;
-   margin-bottom: 100px;
+.link {
+   color: white;
+   text-decoration: none;
+   font-size: 14px;
+}
+
+.button {
+   margin-bottom: 10px;
    width: 400px;
    height: 60px;
    color: white;
    background: #33261d;
    border-radius: 30px;
-
-   display: flex;
-   align-items: center;
-   justify-content: center;
-
+   text-decoration: none;
    transition: background-color 0.2s;
 }
 
-.message .button:hover {
+.buttons {
+   margin-bottom: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin-bottom: 50px;
+}
+
+.button:hover {
    background: #33261d;
 }
 
 .mapContainer {
    width: 80vw;
    height: 80vh;
-
+   padding: 15px;
+   border-radius: 10px;
+   background: #81e2c5d7;
    position: relative;
    display: flex;
    justify-content: center;

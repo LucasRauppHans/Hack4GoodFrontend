@@ -30,15 +30,19 @@ function Landing() {
                      <h1>Help us to make the world cleaner!</h1>
                      <p>Find someone who needs you.</p>
                   </main>
-                  {/* <button type="button" className="button">
-                     <p>More information</p>
-                  </button> */}
-                  <Link
-                     className="button"
-                     to="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
-                  >
-                     <p>Donate</p>
-                  </Link>
+                  <div className="buttons">
+                     <button type="button" className="button">
+                        <p>More information</p>
+                     </button>
+                     <button type="button" className="button">
+                        <a
+                           className="link"
+                           href="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
+                        >
+                           Donate
+                        </a>
+                     </button>
+                  </div>
                </div>
             </div>
             <div className="statisticContainer">

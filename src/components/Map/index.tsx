@@ -10,6 +10,7 @@ import mapIconYellow from "../../utils/mapIconsYellow";
 import { MapPoints } from "../../interfaces/MapPoints";
 import "./Map.css";
 import { CreateReportModal } from "../CreateReportModal";
+import { CreateMoreInfoModal } from "../CreateMoreInfoModal";
 import api from "../../services/api";
 
 interface GarbageMapProps {
@@ -20,6 +21,8 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
    const [currentLatitude, setCurrentLatitude] = useState<number>(-30.1084987);
    const [currentLongitude, setCurrentLongitude] = useState<number>(-51.317225);
    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+   const [moreInfoOpen, setMoreInfoOpen] = useState<boolean>(false);
+   const [idModal, setIdModal] = useState<number>(0);
 
    // eslint-disable-next-line react-hooks/exhaustive-deps
    async function handleSetToInProgress(mapPoint: MapPoints) {
@@ -89,6 +92,15 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
                         >
                            Set to done
                         </button>
+                        <button
+                           type="button"
+                           onClick={() => {
+                              setIdModal(mapPoint.id);
+                              setMoreInfoOpen(true);
+                           }}
+                        >
+                           More info
+                        </button>
                      </Popup>
                   </Marker>
                );
@@ -111,6 +123,19 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
             style={{ overlay: { zIndex: 100, background: "rgba(0,0,0,0.7)" } }}
          >
             <CreateReportModal onClose={(): void => setModalIsOpen(false)} />
+         </Modal>
+
+         <Modal
+            className="modal"
+            isOpen={moreInfoOpen}
+            shouldCloseOnEsc={false}
+            shouldCloseOnOverlayClick={false}
+            style={{ overlay: { zIndex: 100, background: "rgba(0,0,0,0.7)" } }}
+         >
+            <CreateMoreInfoModal
+               id={idModal}
+               onClose={(): void => setMoreInfoOpen(false)}
+            />
          </Modal>
       </>
    );
