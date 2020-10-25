@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./LandingPage.css";
-import { makeStyles } from "@material-ui/core/styles";
-// import logoImg from "../../images/logo.svg";
-import { Link } from "react-router-dom";
 import { GarbageMap } from "../../components/Map";
 import { Statistics } from "../../components/Statistics";
 import api from "../../services/api";
 import { MapPoints } from "../../interfaces/MapPoints";
+import lixo1 from "../../images/lixo1.jpg";
+import lixo2 from "../../images/lixo2.jpg";
+import lixo3 from "../../images/lixo3.jpg";
+import lixo4 from "../../images/lixo4.jpg";
+import lixo5 from "../../images/lixo5.jpg";
+import lixo6 from "../../images/lixo6.jpg";
 
 function Landing() {
    const [mapPoints, setMapPoints] = useState<MapPoints[]>([]);
@@ -27,8 +30,19 @@ function Landing() {
                </div>
                <div className="message">
                   <main>
+<<<<<<< HEAD
                      <h1 className="green_text">When we are all together, WeClean</h1>
                      <p >We connect volunteers that are willing to help clean up the cities, send reports about areas with litter, or both! </p>
+=======
+                     <h1 className="green_text">
+                        When we are all together, WeClean
+                     </h1>
+                     <p>
+                        We connect volunteers that are willing to help clean up
+                        the cities, send reports about areas with litter, or
+                        both!{" "}
+                     </p>
+>>>>>>> 65ef79c6f586f99094e73a8192237e182898274d
                      <p>You can also donate to our community</p>
                   </main>
                   <div className="buttons">
@@ -40,7 +54,11 @@ function Landing() {
                            className="link"
                            href="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
                         >
+<<<<<<< HEAD
                            <h2>Donate</h2> 
+=======
+                           <h2>Donate</h2>
+>>>>>>> 65ef79c6f586f99094e73a8192237e182898274d
                         </a>
                      </button>
                   </div>
@@ -50,10 +68,46 @@ function Landing() {
                <Statistics />
             </div>
             <div className="mapContainer">
+               <div className="lateralMap">
+                  <h1 className="MapDescription">
+                     Find your spot and start to help Find your spot and start
+                     to help Find your spot and start to helpFind your spot and
+                     start to helpFind your spot and start to helpFind your spot
+                     and start to helpFind your spot and start to helpFind your
+                     spot and start to helpFind your spot and start to helpFind
+                     your spot and start to helpFind your spot and start to
+                     helpFind your spot and start to help{" "}
+                  </h1>
+               </div>
                <GarbageMap mapPoints={mapPoints} />
             </div>
-            <div>
-               <p>Footer</p>
+            <div className="footer">
+               <div className="footerline">
+                  <img src={lixo1} className="trashImage" alt="lixo" />
+                  <img src={lixo2} className="trashImage" alt="lixo" />
+                  <img src={lixo3} className="trashImage" alt="lixo" />
+                  <img src={lixo4} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <img src={lixo4} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+               </div>
+               <div className="footerline">
+                  <img src={lixo1} className="trashImage" alt="lixo" />
+                  <img src={lixo2} className="trashImage" alt="lixo" />
+                  <img src={lixo3} className="trashImage" alt="lixo" />
+                  <img src={lixo4} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <img src={lixo4} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+               </div>
             </div>
          </div>
       </>

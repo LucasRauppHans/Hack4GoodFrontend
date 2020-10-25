@@ -1,0 +1,17 @@
+.bar {
+   width: 100vw;
+   height: 60px;
+   background: rgb(2, 0, 36);
+   background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(8, 125, 100, 1) 0%,
+      rgba(0, 255, 188, 1) 100%
+   );
+}
+.bar img {
+   position: absolute;
+   left: 10px;
+   top: 10px;
+   width: 200px;
+}
