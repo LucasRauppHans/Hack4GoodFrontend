@@ -49,7 +49,7 @@ function Landing() {
                            className="link"
                            href="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
                         >
-                        <h2>Donate</h2>
+                           <h2>Donate</h2>
                         </a>
                      </button>
                   </div>
@@ -67,7 +67,7 @@ function Landing() {
                      <div>On the map, select the exact spot where you found litter.</div>
                      <div>After that, just fill the form and send it to our community. {" "}</div>
                   </div>
-                  
+
                </div>
                <GarbageMap mapPoints={mapPoints} />
             </div>
