@@ -30,9 +30,14 @@ function Landing() {
                      <h1>Help us to make the world cleaner!</h1>
                      <p>Find someone who needs you.</p>
                   </main>
-                  <Link to="/app" className="button">
-                     {/* <FiArrowRight size={26} color="rgba(0,0,0,0.6)" /> */}
-                     <p>Join us</p>
+                  {/* <button type="button" className="button">
+                     <p>More information</p>
+                  </button> */}
+                  <Link
+                     className="button"
+                     to="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
+                  >
+                     <p>Donate</p>
                   </Link>
                </div>
             </div>

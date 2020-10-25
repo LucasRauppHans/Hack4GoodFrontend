@@ -23,11 +23,13 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
 
    // eslint-disable-next-line react-hooks/exhaustive-deps
    async function handleSetToInProgress(mapPoint: MapPoints) {
-      await api.put(`trashpoint/:${mapPoint.id}`, "in-progress");
+      await api.put(`trashpoint/${mapPoint.id}`, {
+         progress: "in-progress",
+      });
    }
 
    async function handleSetToDone(mapPoint: MapPoints) {
-      await api.put(`trashpoint/:${mapPoint.id}`, "in-progress");
+      await api.put(`trashpoint/${mapPoint.id}`, { progress: "completed" });
    }
 
    useEffect(() => {
@@ -42,7 +44,7 @@ export const GarbageMap: React.FC<GarbageMapProps> = ({ mapPoints }) => {
             console.error("Error Code = " + error.code + " - " + error.message);
          }
       );
-   }, []);
+   }, [mapPoints]);
 
    const getMapIcon = (mapPoint: MapPoints) => {
       if (mapPoint.progress === "in-progress") return mapIconYellow;
