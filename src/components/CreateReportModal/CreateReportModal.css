@@ -158,13 +158,14 @@ form.reportForm button.confirm-button {
    display: flex;
    align-items: center;
    justify-content: space-around;
+   flex-direction: row;
    margin-top: 10px;
 }
 
 .closeButton {
    background: white;
    height: 40px;
-   width: 48%;
+   width: 300px;
    background: #f5f8fa;
    border: 1px solid #d3e2e5;
    border-radius: 20px;
@@ -175,7 +176,7 @@ form.reportForm button.confirm-button {
 .confirmButton {
    background: #36cf82;
    height: 40px;
-   width: 48%;
+   width: 300px;
    background: #f5f8fa;
    border: 1px solid #d3e2e5;
    border-radius: 20px;

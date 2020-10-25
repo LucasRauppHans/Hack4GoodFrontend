@@ -177,7 +177,7 @@ export const CreateReportModal: React.FC<CreateReportModalProps> = ({
                      type="button"
                      onClick={onClose}
                   >
-                     close
+                     Close
                   </button>
                </div>
             </form>

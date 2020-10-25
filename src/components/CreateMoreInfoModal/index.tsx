@@ -1,11 +1,7 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
-import { Map, TileLayer, Marker } from "react-leaflet";
+import React, { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
-import mapIconRed from "../../utils/mapIconsRed";
 import "./CreateMoreInfoModal.css";
-import { LeafletMouseEvent } from "leaflet";
 import api from "../../services/api";
-import { FiPlus } from "react-icons/fi";
 
 interface MapPoint {
    id: number;
@@ -48,7 +44,7 @@ export const CreateMoreInfoModal: React.FC<CreateMoreInfoModalProps> = ({
    return (
       <div id="page-orphanage">
          <main>
-            <div className="reportForm">
+            <div className="orphanage-details">
                <img
                   src={mapPoint.images[activeImageIndex].url}
                   alt="Lar das meninas"
@@ -73,11 +69,15 @@ export const CreateMoreInfoModal: React.FC<CreateMoreInfoModalProps> = ({
                   })}
                </div>
                <div className="orphanage-details-content">
-                  <h1>{mapPoint.reporterName}</h1>
-                  <p>{mapPoint.description}</p>
+                  <label className="title" htmlFor="name">
+                     Description
+                  </label>
+                  <div className="input">
+                     <h4>{mapPoint.description}</h4>
+                  </div>
                </div>
 
-               <div>
+               <div className="close">
                   <button className="button" onClick={onClose}>
                      Close
                   </button>

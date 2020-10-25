@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./LandingPage.css";
-import { makeStyles } from "@material-ui/core/styles";
-// import logoImg from "../../images/logo.svg";
-import { Link } from "react-router-dom";
 import { GarbageMap } from "../../components/Map";
 import { Statistics } from "../../components/Statistics";
 import api from "../../services/api";
 import { MapPoints } from "../../interfaces/MapPoints";
+import lixo1 from "../../images/lixo1.jpg";
+import lixo2 from "../../images/lixo2.jpg";
+import lixo3 from "../../images/lixo3.jpg";
+import lixo4 from "../../images/lixo4.jpg";
+import lixo5 from "../../images/lixo5.jpg";
+import lixo6 from "../../images/lixo6.jpg";
 
 function Landing() {
    const [mapPoints, setMapPoints] = useState<MapPoints[]>([]);
@@ -51,8 +54,13 @@ function Landing() {
             <div className="mapContainer">
                <GarbageMap mapPoints={mapPoints} />
             </div>
-            <div>
-               <p>Footer</p>
+            <div className="footer">
+               <img src={lixo1} className="trashImage" alt="lixo" />
+               <img src={lixo2} className="trashImage" alt="lixo" />
+               <img src={lixo3} className="trashImage" alt="lixo" />
+               <img src={lixo4} className="trashImage" alt="lixo" />
+               <img src={lixo5} className="trashImage" alt="lixo" />
+               <img src={lixo6} className="trashImage" alt="lixo" />
             </div>
          </div>
       </>
