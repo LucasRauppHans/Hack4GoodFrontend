@@ -51,10 +51,7 @@ function Landing() {
                         </a>
                      </button>
                      <button type="button" className="button">
-                        <a
-                           className="link"
-                           href="https://vakinha.com.br"
-                        >
+                        <a className="link" href="https://www.vakinha.com.br/">
                            <h2>Donate</h2>
                         </a>
                      </button>
