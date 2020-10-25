@@ -1,24 +1,33 @@
 .h1 {
     font-size: 60px;
+    color: rgb(10, 78, 10);
 }
 
 .statistics{
-    margin-top: 10%;
+    text-align: justify;
+    padding-top:50px;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     flex-direction: column;
 }
 
-
-.progress{
-    width: 75%;
-    margin-top: 10px;
-    align-items: center;
-    
-}
-
 .bar {
-    border-radius: 5;
+    background-color: #ffffff;
 }
 
+.bin {
+    margin-right: 15px;
+    width: 50px;
+} 
+
+.binned{
+    display: flex;
+    margin-bottom: 20px;
+  
+}
+
+.text_right{
+   color: #2b6e17;
+   text-align: justify;
+}

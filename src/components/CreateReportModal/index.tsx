@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Map, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import mapIcon from "../../utils/mapIconsGreen";
+import mapIconRed from "../../utils/mapIconsRed";
 import "./CreateReportModal.css";
 import { LeafletMouseEvent } from "leaflet";
 import api from "../../services/api";
@@ -100,7 +100,7 @@ export const CreateReportModal: React.FC<CreateReportModalProps> = ({
                      {position.latitude !== 0 && (
                         <Marker
                            interactive={false}
-                           icon={mapIcon}
+                           icon={mapIconRed}
                            position={[position.latitude, position.longitude]}
                         />
                      )}
