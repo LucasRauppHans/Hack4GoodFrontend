@@ -51,10 +51,7 @@ function Landing() {
                         </a>
                      </button>
                      <button type="button" className="button">
-                        <a
-                           className="link"
-                           href="https://crowdsofts.com/?gclid=CjwKCAjwoc_8BRAcEiwAzJevtamlVZojuxc_gtqcKvTQnO07yk-cSvrNXpB4OuAVHCMJMYCRdoHWexoCB6gQAvD_BwE"
-                        >
+                        <a className="link" href="https://www.vakinha.com.br/">
                            <h2>Donate</h2>
                         </a>
                      </button>
