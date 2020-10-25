@@ -52,15 +52,46 @@ function Landing() {
                <Statistics />
             </div>
             <div className="mapContainer">
+               <div className="lateralMap">
+                  <h1 className="MapDescription">
+                     Find your spot and start to help Find your spot and start
+                     to help Find your spot and start to helpFind your spot and
+                     start to helpFind your spot and start to helpFind your spot
+                     and start to helpFind your spot and start to helpFind your
+                     spot and start to helpFind your spot and start to helpFind
+                     your spot and start to helpFind your spot and start to
+                     helpFind your spot and start to help{" "}
+                  </h1>
+               </div>
                <GarbageMap mapPoints={mapPoints} />
             </div>
             <div className="footer">
-               <img src={lixo1} className="trashImage" alt="lixo" />
-               <img src={lixo2} className="trashImage" alt="lixo" />
-               <img src={lixo3} className="trashImage" alt="lixo" />
-               <img src={lixo4} className="trashImage" alt="lixo" />
-               <img src={lixo5} className="trashImage" alt="lixo" />
-               <img src={lixo6} className="trashImage" alt="lixo" />
+               <div className="footerline">
+                  <img src={lixo1} className="trashImage" alt="lixo" />
+                  <img src={lixo2} className="trashImage" alt="lixo" />
+                  <img src={lixo3} className="trashImage" alt="lixo" />
+                  <img src={lixo4} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <img src={lixo4} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+               </div>
+               <div className="footerline">
+                  <img src={lixo1} className="trashImage" alt="lixo" />
+                  <img src={lixo2} className="trashImage" alt="lixo" />
+                  <img src={lixo3} className="trashImage" alt="lixo" />
+                  <img src={lixo4} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <img src={lixo4} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+                  <img src={lixo5} className="trashImage" alt="lixo" />
+                  <img src={lixo6} className="trashImage" alt="lixo" />
+               </div>
             </div>
          </div>
       </>
