@@ -67,7 +67,7 @@
    font-size: 14px;
 }
 
-.button {
+.buttons .button {
    margin-bottom: 10px;
    width: 400px;
    height: 60px;
@@ -78,7 +78,7 @@
    transition: background-color 0.2s;
 }
 
-.buttons {
+.message .buttons {
    padding-top: 20px;
    margin-bottom: 10px;
    display: flex;
@@ -111,18 +111,18 @@
    width: 64px;
    height: 64px;
    /* background: #15c3d6; */
-   background: #33261d;
+   background: #63c49f;
    border-radius: 20px;
 
    display: flex;
    justify-content: center;
    align-items: center;
-
+   border: none;
    transition: background-color 0.2s;
 }
 
 .createReport:hover {
-   background: #d1e1cb;
+   background: #46a864;
 }
 
 .footer {
@@ -138,8 +138,8 @@
 }
 
 .trashImage {
-   height: 150px;
-   width: 150px;
+   height: 8em;
+   width: 8em;
    border-radius: 40px;
 }
 
