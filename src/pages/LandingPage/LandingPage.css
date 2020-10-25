@@ -142,7 +142,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-
+   border: none;
    transition: background-color 0.2s;
 }
 
@@ -191,7 +191,9 @@ p {
 }
 
 .footerTitle {
+   font-size: 30px;
    margin-bottom: 15px;
+   color: rgb(10, 78, 10);
 }
 
 .compare {
@@ -202,4 +204,13 @@ p {
 
 .arrow {
    width: 8em;
+   margin: 0px 0.5em;
+}
+
+.footerText {
+   font-size: 20px;
+   width: 60em;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
 }

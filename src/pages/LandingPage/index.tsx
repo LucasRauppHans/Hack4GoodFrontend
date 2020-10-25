@@ -11,7 +11,7 @@ import lixo4 from "../../images/lixo4.jpg";
 import lixo5 from "../../images/lixo5.jpg";
 import lixo6 from "../../images/lixo6.jpg";
 import { FiArrowRight } from "react-icons/fi";
-import setaDireita from "../../images/setaDireita.svg";
+import setaDireita from "../../images/iconmonstr-arrow-17.svg";
 
 function Landing() {
    const [mapPoints, setMapPoints] = useState<MapPoints[]>([]);
@@ -44,7 +44,12 @@ function Landing() {
                   </main>
                   <div className="buttons">
                      <button type="button" className="button">
-                        <h2>About volunteering and more</h2>
+                        <a
+                           className="link"
+                           href="https://drive.google.com/file/d/1GdZD2C-eFikm32FXLTx-ZoivgU_s4Xkr/view"
+                        >
+                           <h2>About volunteering and more</h2>
+                        </a>
                      </button>
                      <button type="button" className="button">
                         <a
@@ -97,22 +102,12 @@ function Landing() {
                      <img src={lixo2} className="trashImage" alt="lixo" />
                   </div>
                </div>
-               <div className="footerline">
-                  <div className="compare">
-                     <img src={lixo1} className="trashImage" alt="lixo" />
-                     <img src={setaDireita} alt="seta" className="arrow" />
-                     <img src={lixo2} className="trashImage" alt="lixo" />
-                  </div>
-                  <div className="compare">
-                     <img src={lixo1} className="trashImage" alt="lixo" />
-                     <img src={setaDireita} alt="seta" className="arrow" />
-                     <img src={lixo2} className="trashImage" alt="lixo" />
-                  </div>
-                  <div className="compare">
-                     <img src={lixo1} className="trashImage" alt="lixo" />
-                     <img src={setaDireita} alt="seta" className="arrow" />
-                     <img src={lixo2} className="trashImage" alt="lixo" />
-                  </div>
+               <div className="footerText">
+                  <h2>
+                     Our main goal is to make the world a better place to live!
+                     With your help, we can keep our cities clean and
+                     environmentally friendlier.
+                  </h2>
                </div>
             </div>
          </div>
